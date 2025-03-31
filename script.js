@@ -185,3 +185,43 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+document.getElementById('form').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const form = event.target;
+    const submitButton = form.querySelector('button[type="submit"]');
+    submitButton.textContent = "Sending...";
+
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+        .then(response => {
+            if (response.ok) {
+                submitButton.textContent = "Message Sent !";
+                submitButton.style.backgroundColor = "#02343b";
+
+                setTimeout(() => {
+                    submitButton.textContent = "Send Message";
+                    submitButton.style.backgroundColor = "";
+                    form.reset();
+                }, 3000);
+            } else {
+                throw new Error("Failed to send message");
+            }
+        })
+        .catch(error => {
+            submitButton.textContent = "Failed to Send";
+            submitButton.style.backgroundColor = "red";
+            setTimeout(() => {
+                submitButton.textContent = "Send Message";
+                submitButton.style.backgroundColor = "";
+            }, 3000);
+        });
+});
