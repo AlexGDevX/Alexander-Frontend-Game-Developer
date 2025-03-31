@@ -131,10 +131,10 @@ html, body {
      }
 
      .gradients-container {
-       filter: url(#goo) blur(40px) ;
+       filter: url(#goo) blur(70px);
        width: 100%;
        height: 100%;
-       opacity: .6;
+       opacity: .4;
      }
    
      .g1 {
@@ -269,14 +269,14 @@ html, body {
      color: #fff;
      background-color: rgb(255, 255, 255, .1);
      border-radius: 20px;
-     font-size: 12px;
+     font-size: 13px;
      text-decoration: none;
      text-align: center;
      padding: 10px;
      margin-left: 10px;
      cursor: pointer;
-     transition: .3s;
      opacity: 1;
+     transition: transform .3s ease-in-out, background .4s ease-in-out;
 }
 
 .header:hover a{
@@ -294,24 +294,28 @@ html, body {
 
 .header a:focus, 
 .header a:active {
-     background: linear-gradient(to top, rgba(193, 193, 193, 0.8) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.8) 100%);
-     box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.6);
+     background: linear-gradient(to top, rgba(0, 0, 0, 0) -10%, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0) 110%);
+     box-shadow: 0px 0px 5px 2px rgba(125, 125, 125, 0.468);
      transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+     color: #4f4f4f;
 }
 
 .menu-icon {
-     cursor: none;
+     width: 20px;
      display: none;
      color: #fff;
      font-size: 18px;
      text-decoration: none;
-     transition: .3s;
+     transition: .3s ease-in-out;
      opacity: 1;
+}
+
+.menu-icon i {
+     cursor: pointer;
 }
 
 .menu-icon.active i {
      transform: rotate(90deg);
-     transition: 0.3s ease;
 }
 .menu-icon:hover {
      color: #858585;
@@ -333,11 +337,12 @@ html, body {
      cursor: pointer;
      overflow: hidden;
      transition: .5s;
+     backdrop-filter: blur(3px);
 }
 
 .lng.active {
      width: 250px;
-     height: 60px;
+     height: 50px;
      transition: width 0.5s, height 0.5s;
 }
 
@@ -360,13 +365,13 @@ html, body {
      cursor: pointer;
      color: #fff;
      font-size: 20px;
+     transition: transform .3s ease-in-out;
 }
 
 .lng.active i {
      color: #fff;
      opacity: .8;
      transform: scale(0.9);
-     transition: transform .5s ease-in-out;
 }
 
 .lang-buttons {
@@ -566,25 +571,6 @@ section {
      background: linear-gradient(130deg, rgba(0, 143, 168, 0.649) 45%, transparent 52%);
      background-repeat: no-repeat;
 }
- 
-.about-me .skills-icons {
-     display: flex;
-     padding: 5px;
-}
-
-.about-me .skills-icons i{
-     cursor: pointer;
-     font-size: 35px;
-     color: rgba(1, 115, 135, 0.8);
-     animation: handle 5s infinite;
-     transition: .3s;
-}
-
-.about-me .skills-icons i:hover {
-     color: rgba(0, 217, 255, 0.604);
-     transform: translateY(-10%);
-     transition: .3s;
-}
 
 .work {
      display: block;
@@ -643,6 +629,13 @@ section {
      right: -30%;
      top: -17rem;
      width: 100%;
+     overflow: hidden;
+     border-radius: 20px;
+     transition: transform .5s ease-in-out;
+}
+
+.project-container:hover{
+     transform: scale(1.03);
 }
 
 .project-container .project-info, .project-container .project-info2{
@@ -665,7 +658,6 @@ section {
      border: 2px solid rgba(255, 255, 255, 0.1);
      border-radius: var(--border-radius1);
      backdrop-filter: blur(5px);
-     -webkit-backdrop-filter: blur(5px);
      pointer-events: none;
 }
 
@@ -695,8 +687,7 @@ section {
      opacity: 0;
      height: auto;
      border-radius: 20px;
-     box-shadow: 0px 0px 10px 2px rgba(125, 125, 125, 0.486);
-     transition: opacity .5s ease-in-out, transform 2s ease-in-out;
+     transition: opacity .5s ease-in-out;
      animation: left-right .5s ease-in-out;
      cursor: pointer;
 }
@@ -709,7 +700,6 @@ section {
 .project-image.active:hover {
      opacity: 1;
      transition: .5s ease-in-out;
-     transform: scale(1.03);
 }
 
 .btn-work {
@@ -745,13 +735,13 @@ section {
 
 .btn-work .active-btn button {
      background: linear-gradient(to top, rgba(0, 0, 0, 0) -10%, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0) 110%);
-     box-shadow: 0px 0px 10px 2px rgba(125, 125, 125, 0.468);
+     box-shadow: 0px 0px 10px 2px rgba(146, 146, 146, 0.468);
 }
 
 .btn-work button:hover {
      color: #4f4f4f;
      background: linear-gradient(to top, rgba(0, 0, 0, 0) -10%, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0) 110%);
-     box-shadow: 0px 0px 10px 2px rgba(125, 125, 125, 0.468);
+     box-shadow: 0px 0px 10px 2px rgba(150, 150, 150, 0.468);
 }
 
 .btn-work::before {
@@ -917,7 +907,7 @@ section {
      display: block;
      position: absolute;
      max-width: 1000px;
-     height: 500px;
+     height: 600px;
      top: 210rem;
      left: 10%;
      padding: 50px 50px;
@@ -1035,14 +1025,14 @@ section {
 
 .contact-tab {
      position: absolute;
-     background: #34727cde;
+     background: #34727c;
      color: white;
      padding: 20px;
      width: 100%;
      max-width: 500px;
      border-bottom: none;
      border-radius: 15px 15px 0 0;
-     box-shadow: 0px -5px 15px rgba(17, 73, 87, 0.661);
+     box-shadow: 0px -5px 15px rgba(17, 73, 87, 0.741);
      transform: translateY(100%);
      backdrop-filter: blur(5px);
      -webkit-backdrop-filter: blur(5px);
@@ -1076,7 +1066,7 @@ section {
      cursor: pointer;
      background-color: #163c41;
      border: 1px solid #056574;
-     box-shadow: 0px 0px 10px rgba(65, 181, 183, 0.582);
+     box-shadow: 0px 0px 10px rgba(65, 181, 183, 0.349);
      border-radius: 7px;
      font-family: var(--font-sans);
      transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
@@ -1099,12 +1089,14 @@ section {
      border-radius: 10px;
      margin: 10px auto;
      transition: background 0.3s ease;
-     box-shadow: 0px 0px 10px rgba(65, 181, 183, 0.582);
+     box-shadow: 0px 0px 10px rgba(65, 181, 183, 0.433);
      cursor: pointer;
+     transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
 }
 
 .close-contact:hover{
      background: #0f5762;
+     transform: scale(.98);
 }
 
 .contact-form input,
@@ -1250,7 +1242,48 @@ section {
           top: 180rem;
      }
      .project-container {
-          width: 60%;
+          width: 80%;
+          top: 0rem;
+          left: 0;
+     }
+     .btn-work{
+          display: flex;
+          position: relative;
+          justify-content: start;
+          align-items: center;
+          text-align: center;
+          background-color: rgba(255, 255, 255, 0.1);
+          padding: 10px;
+          width: 430px;
+          margin: 10px;
+          overflow: hidden;
+          border-radius: 10px;
+          top: 0;
+          left: -10px;
+          cursor: pointer;
+     }
+     .btn-work-web {
+          display: flex;
+          position: relative;
+          justify-content: left;
+          align-items: left;
+          text-align: left;
+          background-color: rgba(255, 255, 255, 0.1);
+          padding: 10px;
+          width: 350px;
+          margin: 10px;
+          overflow: hidden;
+          border-radius: 10px;
+          top: 0;
+          left: -10px;
+          cursor: pointer;
+     }
+     .btn-work-web .ui-text-web, .btn-work .ui-text {
+          opacity: 0;
+          display: none;
+     }
+     .btn-work button, .btn-work-web button{
+          font-size: 10px;
      }
      .lng .button-en-s, .lng .button-de-s {
           display: grid;
@@ -1266,24 +1299,18 @@ section {
           height: 140px;
           border-radius: 20px;
      }
+     .lng i {
+          transition: transform 0.6s ease-in-out;
+     }
+     .lng.active i {
+          transform: rotate(180deg);
+     }
      .lang-buttons {
           display: grid;
           text-align: center;
           align-items: center;
           flex-direction: column;
-          margin-left: 0px;
-          opacity: 0;
-          transition: opacity 0.5s ease-in-out;
-     }
-     .project-container .project-info, .project-container .project-info2{
-          width: 50%;
-          bottom: 0%;
-          left: 25%;
-          padding: 5px;
-          font-size: 13px;
-          transform: translate(-50%, -50%);
-          color: #fff;
-          border-radius: 20px;
+          margin-left: 0;
      }
 }
 
@@ -1380,9 +1407,6 @@ section {
      .about-me .skills-list {
           font-size: 15px;
      }
-     .about-me .skills-icons i{
-          font-size: 30px;
-     }
      .work {
           display: block;
           max-width: 600px;
@@ -1444,12 +1468,12 @@ section {
      .btn-work-web {
           display: flex;
           position: relative;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
+          justify-content: left;
+          align-items: left;
+          text-align: left;
           background-color: rgba(255, 255, 255, 0.1);
           padding: 10px;
-          width: 250px;
+          width: 330px;
           margin: 10px;
           overflow: hidden;
           border-radius: 10px;
@@ -1522,9 +1546,6 @@ section {
      }
      .about-me .skills-list {
           font-size: 13px;
-     }
-     .about-me .skills-icons i{
-          font-size: 20px;
      }
      .work {
           display: block;
@@ -1622,9 +1643,6 @@ section {
      }
      .about-me .skills-list {
           font-size: 10px;
-     }
-     .about-me .skills-icons i{
-          display: none;
      }
      .work {
           display: block;
