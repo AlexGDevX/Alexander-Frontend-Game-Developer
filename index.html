@@ -7,10 +7,11 @@
           <link rel="preconnect" href="https://fonts.googleapis.com">
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+          <link rel="icon" type="image/png" href="./assets/p-img.png">
           <meta name="description" content=" Alexander's Portfolio - Frontend & Game Developer. Explore my work, skills, and projects. Contact me for collaboration or inquiries.">
           <meta name="keywords" content="Frontend Developer, Game Developer, Portfolio, Web Development, UI/UX Design, JavaScript, HTML, CSS, TypeScript, Node.js">
           <meta name="author" content="Alexander G.">
-          <link rel="icon" type="image/png" href="./assets/p-img.png">
           <title>Alexander | Frontend & Game Developer</title>
      </head>
      <body>
@@ -66,14 +67,24 @@
                     <p data-lang="description">In my free time, I enjoy reading books on technology and taking walks in the park, where I appreciate the beauty of nature.</p>
                     <p data-lang="description2" style="color: rgb(100, 195, 212); text-shadow: 0px 0px 10px rgba(23, 164, 189, 0.8);">Here are a few technologies I’ve been working with recently:</p>
                </div>
-               <ul class="skills-list">
-                    <li data-skill="HTML" data-percentage="100%" style="background-size: 210% 200%;"> </li> 
-                    <li data-skill="CSS" data-percentage="100%" style="background-size: 210% 200%;"></li>
-                    <li data-skill="JavaScript" data-percentage="80%" style="background-size: 150% 200%;"></li>
-                    <li data-skill="LUA" data-percentage="80%" style="background-size: 150% 200%;"></li>
-                    <li data-skill="Node.js" data-percentage="70%" style="background-size: 130% 200%;"></li>
-                    <li data-skill="TypeScript" data-percentage="50%" style="background-size: 90% 200%;"> </li>
-                </ul>                
+               <div class="scroller">
+                    <ul class="tag-list scroller_inner">
+                         <li data-percentage="100%"><i class="fa-brands fa-html5"></i> HTML</li>
+                         <li data-percentage="100%"><i class="fa-brands fa-css3-alt"></i> CSS</li>
+                         <li data-percentage="100%"><i class="devicon-sass-original"></i> SASS</li>
+                         <li data-percentage="100%"><i class="devicon-sass-original"></i> SCSS</li>
+                         <li data-percentage="95%"><i class="devicon-photoshop-plain"></i> Photoshop</li>
+                         <li data-percentage="90%"><i class="fa-brands fa-figma"></i> Figma</li>
+                         <li data-percentage="80%"><i class="fa-brands fa-js"></i> JavaScript</li>
+                         <li data-percentage="75%"><i class="devicon-bootstrap-plain"></i> Bootstrap</li>
+                         <li data-percentage="70%"><i class="devicon-react-original"></i> React</li>
+                         <li data-percentage="70%"><i class="devicon-vuejs-plain"></i> VUE</li>
+                         <li data-percentage="70%"><i class="devicon-angularjs-plain"></i> Angular</li>
+                         <li data-percentage="65%"><i class="devicon-lua-plain"></i> LUA</li>
+                         <li data-percentage="55%"><i class="devicon-typescript-plain"></i> TypeScript</li>
+                         <li data-percentage="50%"><i class="devicon-nodejs-plain"></i> Node.js</li>
+                    </ul>
+               </div>
           </div>
      </section>
 
@@ -87,7 +98,7 @@
               <button onclick="showProject('ui', 'ui-project2')" data-lang="btn2">Project2</button>
               <button onclick="showProject('ui', 'ui-project3')" data-lang="btn3">Project3</button>
               <button onclick="showProject('ui', 'ui-project4')" data-lang="btn4">Project4</button>
-              <button onclick="showProject('ui', 'ui-project5')" data-lang="btn4">Project5</button>
+              <button onclick="showProject('ui', 'ui-project5')" data-lang="btn5">Project5</button>
           </div>
           
           <div class="project-container">
@@ -245,10 +256,16 @@
           <div class="contact-tab">
                <div class="close-contact"></div>
                <div class="contact-icons">
-                    <a target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a target="_blank"><i class="fab fa-github"></i></a>
-                    <a target="_blank"><i class="fab fa-discord"></i></a>
-                    <a target="_blank"><i class="fab fa-dribbble"></i></a>
+                    <a href="https://github.com/AlexanderGeorg" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://harlequin-cookie-30.tiiny.site" target="_blank"><i class="fas fa-user"></i></a>
+                    <div class="discord-container">
+                         <a target="_blank">
+                             <i class="fab fa-discord"></i>
+                         </a>
+                         <div id="discord-profile" class="discord-text">
+                             FaGa #3981
+                         </div>
+                    </div>
                 </div>
                <div class="contact-header">
                    <a href="mailto:gslexandru@gmail.com" class="contact-email">
