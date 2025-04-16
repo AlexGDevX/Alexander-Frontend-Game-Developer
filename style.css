@@ -1,4 +1,3 @@
-/* UPDATE 02.03.2025 */
 *{
      margin: 0;
      padding: 0;
@@ -21,14 +20,13 @@ html, body {
 
 :root {
      --color-bg0: rgb(255, 255, 255, .4);
-     --color-bg1: rgb(45, 22, 102);
-     --color-bg2: rgb(0, 17, 82);
-     --color-bg3: rgb(15 23 42);
+     --color-bg1: rgb(33, 17, 73);
+     --color-bg2: rgb(7, 28, 110);
+     --color-bg3: rgb(5, 16, 75);
+     --color-bg4: rgb(22, 178, 205);
      --color1: 18, 113, 255;
      --color2: 221, 74, 255;
      --color3: 100, 220, 255;
-     --color4: 200, 50, 50;
-     --color5: 180, 180, 50;
      --color-interactive: 140, 100, 255;
      --circle-size: 80%;
      --blending: hard-light;
@@ -101,6 +99,15 @@ html, body {
      }
 }
 
+@keyframes spin {
+     from {
+         transform: rotate(0deg);
+     }
+     to {
+         transform: rotate(360deg);
+     }
+}
+
 .hacker-text {
      text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
      transition: text-shadow .5s ease-in-out;
@@ -139,7 +146,7 @@ html, body {
    
      .g1 {
        position: absolute;
-       background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
+       background: radial-gradient(circle at center, rgba(var(--color1), 0.3) 0, rgba(var(--color1), 0) 50%) no-repeat;
        mix-blend-mode: var(--blending);
        width: var(--circle-size);
        height: var(--circle-size);
@@ -147,12 +154,12 @@ html, body {
        left: calc(50% - var(--circle-size) / 2);
        transform-origin: center center;
        animation: moveVertical 30s ease infinite;
-       opacity: 1;
+       opacity: 0.5;
      }
    
      .g2 {
        position: absolute;
-       background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
+       background: radial-gradient(circle at center, rgba(var(--color2), 0.3) 0, rgba(var(--color2), 0) 50%) no-repeat;
        mix-blend-mode: var(--blending);
        width: var(--circle-size);
        height: var(--circle-size);
@@ -160,12 +167,12 @@ html, body {
        left: calc(50% - var(--circle-size) / 2);
        transform-origin: calc(50% - 400px);
        animation: moveInCircle 20s reverse infinite;
-       opacity: 1;
+       opacity: 0.5;
      }
    
      .g3 {
        position: absolute;
-       background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
+       background: radial-gradient(circle at center, rgba(var(--color3), 0.3) 0, rgba(var(--color3), 0) 50%) no-repeat;
        mix-blend-mode: var(--blending);
        width: var(--circle-size);
        height: var(--circle-size);
@@ -173,12 +180,12 @@ html, body {
        left: calc(50% - var(--circle-size) / 2 - 500px);
        transform-origin: calc(50% + 400px);
        animation: moveInCircle 40s linear infinite;
-       opacity: 1;
+       opacity: 0.5;
      }
    
      .g4 {
        position: absolute;
-       background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
+       background: radial-gradient(circle at center, rgba(var(--color3), 0.3) 0, rgba(var(--color3), 0) 50%) no-repeat;
        mix-blend-mode: var(--blending);
        width: var(--circle-size);
        height: var(--circle-size);
@@ -186,12 +193,12 @@ html, body {
        left: calc(50% - var(--circle-size) / 2);
        transform-origin: calc(50% - 200px);
        animation: moveHorizontal 40s ease infinite;
-       opacity: 0.7;
+       opacity: 0.5;
      }
    
      .g5 {
        position: absolute;
-       background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
+       background: radial-gradient(circle at center, rgba(var(--color1), 0.3) 0, rgba(var(--color3), 0) 50%) no-repeat;
        mix-blend-mode: var(--blending);
        width: calc(var(--circle-size) * 2);
        height: calc(var(--circle-size) * 2);
@@ -199,12 +206,12 @@ html, body {
        left: calc(50% - var(--circle-size));
        transform-origin: calc(50% - 800px) calc(50% + 200px);
        animation: moveInCircle 20s ease infinite;
-       opacity: 1;
+       opacity: 0.5;
      }
 
      .g5 {
           position: absolute;
-          background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
+          background: radial-gradient(circle at center, rgba(var(--color3), 0.3) 0, rgba(var(--color3), 0) 50%) no-repeat;
           mix-blend-mode: var(--blending);
           width: calc(var(--circle-size) * 2);
           height: calc(var(--circle-size) * 2);
@@ -212,7 +219,7 @@ html, body {
           left: calc(50% - var(--circle-size));
           transform-origin: calc(50% - 800px) calc(50% + 200px);
           animation: moveInCircle 20s ease infinite;
-          opacity: 1;
+          opacity: 0.5;
      }
    
      .interactive {
@@ -223,15 +230,15 @@ html, body {
        height: 100%;
        top: -50%;
        left: -50%;
-       opacity: 0.7;
+       opacity: 0.5;
      }
 }
-   
+
 .header {
      display: flex;
      position: absolute;
      z-index: 1000;
-     width: 500px;
+     width: 475px;
      height: 50px;
      top: 15px;
      left: 50%;
@@ -294,7 +301,7 @@ html, body {
 
 .header a:focus, 
 .header a:active {
-     background: linear-gradient(to top, rgba(0, 0, 0, 0) -10%, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0) 110%);
+     background: linear-gradient(to top, rgba(0, 0, 0, 0) -10%, rgba(255, 255, 255, 0.842) 50%, rgba(0, 0, 0, 0) 110%);
      box-shadow: 0px 0px 5px 2px rgba(125, 125, 125, 0.468);
      transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
      color: #4f4f4f;
@@ -426,11 +433,19 @@ html, body {
      border-radius: 20px;
      cursor: pointer;
      border: none !important;
-     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.button-en:hover, .button-de:hover {
+.button-en:hover {
      color: #4f4f4f;
+     transform: rotate(2deg);
+     background: linear-gradient(to top, rgba(0, 0, 0, 0) -10%, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0) 110%);
+     box-shadow: 0px 0px 10px 2px rgba(125, 125, 125, 0.468);
+}
+
+.button-de:hover {
+     color: #4f4f4f;
+     transform: rotate(-2deg);
      background: linear-gradient(to top, rgba(0, 0, 0, 0) -10%, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0) 110%);
      box-shadow: 0px 0px 10px 2px rgba(125, 125, 125, 0.468);
 }
@@ -462,12 +477,214 @@ section {
      transform: translateY(50px);
 }
 
-.about-me {
+.intro {
      display: block;
      position: sticky;
+     max-width: 100%;
+     height: 300px;
+     top: 15rem;
+     left: 50%;
+     transform: translate(-50% 50%);
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+}
+
+.intro .intro-title{
+     display: inline-block;
+     position: relative;
+     white-space: normal;
+     word-wrap: break-word;
+     font-family: myFont;
+     width: 80%;
+     line-height: 1.2;
+     letter-spacing: 1px;
+     font-size: 48px;
+     font-weight: 600;
+     margin: 0px 0px 20px;
+     background: linear-gradient(to top right, rgba(95, 95, 95, 0.315) -10%, rgba(245, 245, 245, 0.89) 50%, rgba(66, 66, 66, 0) 110%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     text-fill-color: transparent;
+     cursor: default;
+}
+
+.intro .intro-subtitle {
+     position: relative;
+     font-family: myFont;
+     letter-spacing: 1px;
+     font-size: 24px;
+     font-weight: 600;
+     margin: 0px 0px 20px;
+     background: linear-gradient(to top, rgb(214, 214, 214) 10%, rgb(34, 34, 34) 100%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     text-fill-color: transparent;
+     cursor: default;
+}
+
+.intro .my-photo{
+     position: relative;
+     width: 60px;
+     height: auto;
+     margin-bottom: -35px;
+     border-radius: 1.5rem;
+     border: 2px solid #ffffffcc;
+     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+     overflow: hidden;
+     cursor: pointer;
+     transition: .5s ease-in-out;
+}
+
+.intro .my-photo:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 0 20px rgba(255, 255, 255, 0.315);
+}
+
+.intro .intro-contact {
+     display: inline-flex;
+     position: relative;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     width: 100%;
+     top: 15px;
+}
+
+.intro .contact-button {
+     display: inline-flex;
+     position: relative;
+     align-items: center;
+     justify-content: space-between;
+     text-align: center;
+     font-family: myFont;
+     overflow: hidden;
+     cursor: pointer;
+     height: 45px;
+     margin: 25px;
+     gap: 10px;
+     padding: 12px 20px;
+     font-size: 17px;
+     font-weight: 600;
+     color: #e6e6e6;
+     text-decoration: none;
+     border-radius: 30px;
+     background: linear-gradient(to top right, rgba(95, 95, 95, 0.315) -10%, rgba(245, 245, 245, 0.356) 50%, rgba(214, 214, 214, 0.233) 100%);
+     box-shadow: 0px 0px 10px 2px rgba(197, 197, 197, 0.109);
+     border: 1px solid #dadada27;
+     transition: all .4s ease-in-out;
+}
+
+.intro .contact-button::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: -100%;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(211, 211, 211, 0.555) 50%, rgba(0, 0, 0, 0) 100%);
+     transition: .3s;
+}
+
+.intro .contact-button:hover::before {
+     left: 100%;
+}
+
+.intro .contact-button:hover {
+     transform: scale(1.03);
+     color: #313131dc;
+     background: linear-gradient(to top right, rgba(95, 95, 95, 0.315) -10%, rgba(245, 245, 245, 0.753) 50%, rgba(214, 214, 214, 0.562) 100%);
+     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.intro .arrow-circle {
+     display: flex;
+     position: relative;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     cursor: pointer;
+     left: 13px;
+     width: 30px;
+     height: 30px;
+     border-radius: 50%;
+     background: linear-gradient(to top right, rgba(59, 59, 59, 0.534) 10%, rgba(114, 114, 114, 0.466) 50%, rgba(167, 167, 167, 0.521) 110%);
+     box-shadow: 0px 0px 10px 2px rgba(197, 197, 197, 0.109);
+     transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.intro .contact-button:hover .arrow-circle{
+     background: linear-gradient(to top right, rgba(100, 100, 100, 0.336) -10%, rgba(255, 255, 255, 0.692) 50%, rgb(201, 201, 201) 100%);
+     box-shadow: 0px 0px 10px 5px rgba(73, 73, 73, 0.24);
+     transform: rotate(-180deg);
+}
+
+.intro .arrow-circle .arrow {
+     position: absolute;
+     top: 2px;
+     font-size: 20px;
+     color: #e0e0e0;
+     transition: transform 0.3s ease-in-out;
+}
+
+.intro .contact-button:hover .arrow{
+     color: #242424c7;
+}
+
+.intro .email-intro {
+     display: inline-flex;
+     align-items: center;
+     font-family: myFont;
+     letter-spacing: 2px;
+     gap: 15px;
+     font-size: 16px;
+     color: #e0e0e0;
+     cursor: pointer;
+     transition: all .4s ease-in-out;
+}
+
+.intro .email-intro:hover {
+     transform: translateY(-3px);
+     color: #c0c0c0;
+}
+
+.intro .email-intro i {
+     font-size: 20px;
+     color: #e0e0e0;
+     transition: all .4s ease-in-out;
+}
+
+.intro .email-intro:hover i {
+     color: #c0c0c0;
+}
+
+.intro .copy-message {
+     display: none;
+     gap: 15px;
+     color: #e0e0e0;
+     font-family: myFont;
+     font-size: 16px;
+     letter-spacing: 2px;
+     cursor: pointer;
+     opacity: 0;
+     transition: all .4s ease-in-out;
+}
+
+.intro .copy-message:hover {
+     color: #c0c0c0;
+}
+
+.intro .copy-message.show {
+     display: block;
+     opacity: 1;
+}
+
+.about-me {
+     display: block;
+     position: absolute;
      max-width: 1000px;
      height: 800px;
-     top: 25rem;
+     top: 35rem;
      left: 10%;
      padding: 100px 50px;
      align-items: flex-start;
@@ -485,7 +702,10 @@ section {
      margin: 0px 0px 20px;
      transition: .3s;
      cursor: pointer;
-     background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(211, 211, 211, 0.22) 50%, rgba(0, 0, 0, 0) 100%);
+     background: linear-gradient(to top right, rgba(95, 95, 95, 0.315) -10%, rgba(245, 245, 245, 0.89) 50%, rgba(66, 66, 66, 0) 110%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     text-fill-color: transparent;
 }
 
 .about-me .about:hover {
@@ -495,6 +715,23 @@ section {
      text-shadow: 0px 0px 10px rgba(23, 164, 189, 0.8);
      color: transparent;
 } 
+
+.about-me .about::before {
+     content: "";
+     position: absolute;
+     left: 0;
+     bottom: -5px;
+     width: 100%;
+     height: 3px;
+     background-color: rgba(197, 197, 197, 0.658);
+     box-shadow: 0px 0px 10px 0px rgba(196, 196, 196, 0.8);
+     transition: width .3s ease-in-out;
+     border-radius: 10px;
+}
+
+.about-me .about:hover::before {
+     width: 0%;
+}
 
 .about-me .about::after {
      content: "";
@@ -547,13 +784,13 @@ section {
      margin-left: 10px;
      border-radius: 20px;
      cursor: pointer;
-     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+     transition: transform .3s ease-in-out;
 }
 
 .about-me .scroller_inner li:hover {
      position: relative;
      animation-play-state: paused;
-     transform: translateY(-5px);
+     transform: translateY(-5px) rotate(-2deg);
      z-index: 1;
 }
 
@@ -630,7 +867,7 @@ section {
      position: absolute;
      max-width: 1000px;
      height: 1300px;
-     top: 80rem;
+     top: 90rem;
      left: 10%;
      padding: 50px 50px;
      align-items: flex-start;
@@ -649,7 +886,27 @@ section {
      margin: 0px 0px 20px;
      transition: .5s;
      cursor: pointer;
-     background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(211, 211, 211, 0.22) 50%, rgba(0, 0, 0, 0) 100%);
+     background: linear-gradient(to top right, rgba(95, 95, 95, 0.315) -10%, rgba(245, 245, 245, 0.89) 50%, rgba(66, 66, 66, 0) 110%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     text-fill-color: transparent;
+}
+
+.work .work-title::before {
+     content: "";
+     position: absolute;
+     left: 0;
+     bottom: -5px;
+     width: 100%;
+     height: 3px;
+     background-color: rgba(197, 197, 197, 0.658);
+     box-shadow: 0px 0px 10px 0px rgba(196, 196, 196, 0.8);
+     transition: width .3s ease-in-out;
+     border-radius: 10px;
+}
+
+.work .work-title:hover::before {
+     width: 0%;
 }
 
 .work .work-title:hover {
@@ -760,6 +1017,7 @@ section {
      justify-content: center;
      align-items: center;
      background-color: rgba(255, 255, 255, 0.1);
+     border: 1px solid #dadada23;
      padding: 10px;
      width: 100px;
      overflow: hidden;
@@ -787,6 +1045,7 @@ section {
 
 .btn-work button:hover {
      color: #4f4f4f;
+     transform: scale(1.1) rotate(5deg);
      background: linear-gradient(to top, rgba(0, 0, 0, 0) -10%, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0) 110%);
      box-shadow: 0px 0px 10px 2px rgba(150, 150, 150, 0.468);
 }
@@ -803,6 +1062,13 @@ section {
 
 .btn-work:hover::before {
      top: 100%;
+}
+
+button.active-button {
+     background: linear-gradient(to top, rgba(0, 0, 0, 0) -10%, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0) 110%);
+     box-shadow: 0px 0px 10px 2px rgba(125, 125, 125, 0.468);
+     transform: scale(1.1);
+     color: rgb(57, 153, 170);
 }
 
 .btn-work .ui-text {
@@ -823,6 +1089,7 @@ section {
      justify-content: center;
      align-items: center;
      background-color: rgba(255, 255, 255, 0.1);
+     border: 1px solid #dadada23;
      padding: 10px;
      width: 100px;
      overflow: hidden;
@@ -850,6 +1117,7 @@ section {
 
 .btn-work-web button:hover {
      color: #4f4f4f;
+     transform: scale(1.1) rotate(-5deg);
      background: linear-gradient(to top, rgba(0, 0, 0, 0) -10%, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0) 110%);
      box-shadow: 0px 0px 10px 2px rgba(125, 125, 125, 0.468);
 }
@@ -881,8 +1149,8 @@ section {
 }
 
 @keyframes down-up {
-     0% {transform: translateY(50%); opacity: 0;}
-     100% {transform: translateY(-50%); opacity: 1;}
+     from {transform: translateY(50%); opacity: 0;}
+     to {transform: translateY(-50%); opacity: 1;}
 }
 
 @keyframes handle{
@@ -896,7 +1164,7 @@ section {
      position: absolute;
      max-width: 1000px;
      height: 500px;
-     top: 170rem;
+     top: 190rem;
      right: 10%;
      padding: 50px 50px;
      align-items: flex-end;
@@ -915,7 +1183,27 @@ section {
      margin: 0px 0px 20px;
      transition: .5s;
      cursor: pointer;
-     background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(211, 211, 211, 0.22) 50%, rgba(0, 0, 0, 0) 100%);
+     background: linear-gradient(to top right, rgba(95, 95, 95, 0.315) -10%, rgba(245, 245, 245, 0.89) 50%, rgba(66, 66, 66, 0) 110%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     text-fill-color: transparent;
+}
+
+.school .school-title::before {
+     content: "";
+     position: absolute;
+     right: 0;
+     bottom: -5px;
+     width: 100%;
+     height: 3px;
+     background-color: rgba(197, 197, 197, 0.658);
+     box-shadow: 0px 0px 10px 0px rgba(196, 196, 196, 0.8);
+     transition: width .3s ease-in-out;
+     border-radius: 10px;
+}
+
+.school .school-title:hover::before {
+     width: 0%;
 }
 
 .school .school-title:hover {
@@ -956,7 +1244,7 @@ section {
      position: absolute;
      max-width: 1000px;
      height: 600px;
-     top: 210rem;
+     top: 230rem;
      left: 10%;
      padding: 50px 50px;
      align-items: flex-start;
@@ -975,7 +1263,27 @@ section {
      margin: 0px 0px 20px;
      transition: .5s;
      cursor: pointer;
-     background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(211, 211, 211, 0.22) 50%, rgba(0, 0, 0, 0) 100%);
+     background: linear-gradient(to top right, rgba(95, 95, 95, 0.315) -10%, rgba(245, 245, 245, 0.89) 50%, rgba(66, 66, 66, 0) 110%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     text-fill-color: transparent;
+}
+
+.plans .plans-title::before {
+     content: "";
+     position: absolute;
+     left: 0;
+     bottom: -5px;
+     width: 100%;
+     height: 3px;
+     background-color: rgba(197, 197, 197, 0.658);
+     box-shadow: 0px 0px 10px 0px rgba(196, 196, 196, 0.8);
+     transition: width .3s ease-in-out;
+     border-radius: 10px;
+}
+
+.plans .plans-title:hover::before {
+     width: 0%;
 }
 
 .plans .plans-title:hover {
@@ -988,7 +1296,7 @@ section {
 .plans .plans-title::after {
      content: "";
      position: absolute;
-     right: 0;
+     left: 0;
      bottom: -5px;
      width: 0%;
      height: 3px;
@@ -1033,13 +1341,13 @@ section {
      opacity: 1;
 }
  
-.bg-contact{
+.bg-contact {
      position: relative;
      width: 100%;
      height: 200px;
-     background: linear-gradient(to bottom, rgba(119, 171, 171, 0.571) 0%, rgba(85, 158, 167, 0.531) 50%, rgb(15 23 42) 100%);
+     background: linear-gradient(to top, rgb(18, 50, 58) 0%, rgba(19, 86, 103, 0.896) 100%);
      border-radius: 50% 50% 0 0;
-     box-shadow: 0px -15px 25px rgba(66, 114, 126, 0.556);
+     box-shadow: 0px -15px 25px rgba(12, 63, 76, 0.556);
 }
 
 .contact.show .bg-contact {
@@ -1074,7 +1382,7 @@ section {
 
 .contact-tab {
      position: absolute;
-     background: rgb(16, 42, 48);
+     background: linear-gradient(to bottom , rgb(18, 59, 71) 0%, rgb(14, 72, 90) 100%);
      color: white;
      padding: 20px;
      width: 100%;
@@ -1120,7 +1428,7 @@ section {
 }
 
 .contact-header a:hover {
-     background-color: #02444d;
+     background-color: #02363d;
      transform: scale(.98);
 }
 
@@ -1179,7 +1487,7 @@ section {
      margin-top: 10px;
      padding: 12px;
      background: #164d54;
-     color: #8de9fe;
+     color: #6be4ff;
      border: none;
      border-radius: 8px;
      font-weight: bold;
@@ -1192,7 +1500,7 @@ section {
 }
 
 .contact-form button:hover {
-     background: #02444d;
+     background: #02363d;
      transform: scale(.98);
 }
 
@@ -1216,7 +1524,7 @@ section {
     color: #185d66;
 }
 
-.contact-icons .discord-container {
+.contact-icons .discord-container, .cv-container, .git-container {
      display: inline-block;
 }
  
@@ -1225,17 +1533,47 @@ section {
      position: absolute;
      bottom: 88%;
      left: 19.2rem;
-     padding: 5px;
+     padding: 8px;
      font-family: var(--font-sans);
      font-weight: 600;
      font-size: 14px;
-     border-radius: 15px;
+     border-radius: 10px;
      color: #8de9fe;
      background: #176771;
      transform: translateX(-50%);
 }
- 
-.contact-icons .discord-text::after {
+
+.contact-icons .cv-text {
+     display: none;
+     position: absolute;
+     bottom: 88%;
+     left: 17.05rem;
+     padding: 8px;
+     font-family: var(--font-sans);
+     font-weight: 600;
+     font-size: 14px;
+     border-radius: 10px;
+     color: #8de9fe;
+     background: #176771;
+     transform: translateX(-50%);
+}
+
+.contact-icons .git-text {
+     display: none;
+     position: absolute;
+     bottom: 88%;
+     left: 15.1rem;
+     padding: 8px;
+     font-family: var(--font-sans);
+     font-weight: 600;
+     font-size: 14px;
+     border-radius: 10px;
+     color: #8de9fe;
+     background: #176771;
+     transform: translateX(-50%);
+}
+
+.contact-icons .discord-text::after, .cv-text::after, .git-text::after {
      content: '';
      position: absolute;
      top: 100%; /* Plasează săgeata sub text */
@@ -1246,14 +1584,14 @@ section {
      border-color: #176771 transparent transparent transparent;
 }
 
-.contact-icons .discord-container:hover .discord-text {
+.contact-icons .discord-container:hover .discord-text, .cv-container:hover .cv-text, .git-container:hover .git-text {
      display: block;
 }
 
 @media (min-width: 1920px){
      .about-me {
           left: 15%;
-          top: 15rem;
+          top: 32rem;
      }
      .about-me .about {
           font-size: 55px;
@@ -1263,14 +1601,14 @@ section {
      }
      .work {
           left: 15%;
-          top: 80rem;
+          top: 100rem;
      }
      .work .work-title {
           font-size: 55px;
      }
      .school {
           right: 15%;
-          top: 180rem;
+          top: 205rem;
      }
      .school-title {
           font-size: 55px;
@@ -1280,7 +1618,7 @@ section {
      }
      .plans {
           left: 15%;
-          top: 220rem;
+          top: 240rem;
      }
      .plans .plans-title {
           font-size: 55px;
@@ -1298,6 +1636,12 @@ section {
 }
 
 @media (max-width: 1270px) {
+     .about-me {
+          display: block;
+          max-width: 900px;
+          height: 900px;
+          left: 10%;
+     }
      .project-container {
           width: 80%;
           top: -13rem;
@@ -1315,11 +1659,17 @@ section {
 }
 
 @media (max-width: 1070px) {
+     .intro {
+          height: 300px;
+     }
+     .intro .intro-title {
+          font-size: 40px;
+     }
      .about-me {
           display: block;
           max-width: 760px;
           height: 900px;
-          top: 5rem;
+          top: 40rem;
           margin-right: 50px;
           left: 10%;
      }
@@ -1327,7 +1677,7 @@ section {
           display: block;
           max-width: 760px;
           height: 700px;
-          top: 70rem;
+          top: 95rem;
           margin-right: 50px;
           left: 10%;
      }
@@ -1335,12 +1685,12 @@ section {
           display: block;
           max-width: 760px;
           height: 700px;
-          top: 140rem;
+          top: 160rem;
           right: 5%;
      }
      .plans {
           left: 10%;
-          top: 180rem;
+          top: 200rem;
      }
      .project-container {
           width: 80%;
@@ -1349,11 +1699,6 @@ section {
      }
      .btn-work{
           display: flex;
-          position: relative;
-          justify-content: start;
-          align-items: center;
-          text-align: center;
-          background-color: rgba(255, 255, 255, 0.1);
           padding: 10px;
           width: 430px;
           margin: 10px;
@@ -1361,23 +1706,16 @@ section {
           border-radius: 10px;
           top: 0;
           left: -10px;
-          cursor: pointer;
      }
      .btn-work-web {
           display: flex;
-          position: relative;
-          justify-content: left;
-          align-items: left;
-          text-align: left;
-          background-color: rgba(255, 255, 255, 0.1);
           padding: 10px;
-          width: 350px;
+          width: 430px;
           margin: 10px;
           overflow: hidden;
           border-radius: 10px;
           top: 0;
           left: -10px;
-          cursor: pointer;
      }
      .btn-work-web .ui-text-web, .btn-work .ui-text {
           opacity: 0;
@@ -1386,6 +1724,7 @@ section {
      .btn-work button, .btn-work-web button{
           font-size: 10px;
      }
+     
      .lng .button-en-s, .lng .button-de-s {
           display: grid;
      }
@@ -1412,6 +1751,36 @@ section {
           align-items: center;
           flex-direction: column;
           margin-left: 0;
+     }
+     .project-container .project-info, .project-container .project-info2{
+          border-radius: 10px;
+     }
+}
+
+@media (max-width: 850px) {
+     .intro .intro-title{
+          font-size: 35px;
+     }
+     .intro .intro-subtitle{
+          font-size: 20px;
+     }
+     .about-me {
+          display: block;
+          max-width: 650px;
+          height: auto;
+          margin-top: 10rem;
+          top: 40rem;
+          left: 10%;
+          padding: 10px 50px;
+     }
+     .work {
+          top: 110rem;
+     }
+     .school {
+          top: 170rem;
+     }
+     .plans {
+          top: 210rem;
      }
 }
 
@@ -1457,90 +1826,102 @@ section {
           max-width: 700px;
           height: auto;
           margin-top: 10rem;
-          top: 0;
-          left: -5%;
+          top: 40rem;
+          left: 0%;
           padding: 10px 50px;
      }
+     .about-me .about {
+          font-size: 40px;
+     }
      .about-me .about-p p{
-          font-size: 20px;
+          font-size: 18px;
+     }
+     .work .work-title {
+          font-size: 40px;
      }
      .work {
           display: block;
           max-width: 760px;
           height: 700px;
-          top: 80rem;
+          top: 110rem;
           margin-right: 50px;
           left: 0%;
+     }
+     .school .school-title {
+          font-size: 40px;
      }
      .school {
           display: block;
           max-width: 760px;
           height: 700px;
-          top: 150rem;
+          top: 170rem;
           right: 5%;
+     }
+     .plans .plans-title {
+          font-size: 40px;
      }
      .plans {
           display: block;
           max-width: 760px;
           height: 700px;
-          top: 190rem;
+          top: 210rem;
           margin-right: 50px;
           left: 0%;
      }
 } 
 
-@media (max-width: 690px) {
+@media (max-width: 700px) {
      .about-me {
           display: block;
           max-width: 500px;
           height: 800px;
           margin-top: 5rem;
-          top: 0;
+          top: 40rem;
           left: -5%;
           padding: 50px 50px;
      }
      .about-me .about {
-          font-size: 30px;
+          font-size: 35px;
      }
      .about-me .about-p p{
-          font-size: 15px;
+          font-size: 18px;
      }
      .work {
           display: block;
           max-width: 600px;
           height: 800px;
-          top: 60rem;
+          top: 105rem;
           left: -5%;
           margin: 0;
      }
      .work .work-title {
-          font-size: 30px;
+          font-size: 35px;
      }
      .school {
           display: block;
           max-width: 760px;
           height: 800px;
-          top: 110rem;
+          top: 150rem;
           right: 0%;
      }
      .school .school-title {
-          font-size: 30px;
+          font-size: 35px;
      }
      .school .school-p p{
-          font-size: 15px;
+          font-size: 17px;
      }
      .plans {
           display: block;
           max-width: 760px;
           height: 700px;
-          top: 140rem;
+          top: 180rem;
           left: -5%;
      }
      .plans .plans-title {
-          font-size: 30px;
+          font-size: 35px;
      }
      .plans .plans-p p{
-          font-size: 15px;
+          font-size: 17px;
      }
      .project-container {
           width: 80%;
@@ -1588,6 +1969,19 @@ section {
      }
 }
 
+@media (max-width: 618px) {
+     .intro .intro-title {
+          font-size: 30px;
+     }
+
+     .intro .intro-subtitle {
+          font-size: 18px;
+     }
+     .intro .email-intro {
+          font-size: 13px;
+     }
+}
+
 @media (max-width: 480px) {
      .header {
           display: flex;
@@ -1627,138 +2021,48 @@ section {
           align-items: center;
           justify-content: center;
      }
+     .intro .intro-title {
+          font-size: 25px;
+     }
+     .intro .contact-button{
+          font-size: 14px;
+     }
+     .intro .intro-subtitle {
+          font-size: 14px;
+     }
+     .intro .email-intro {
+          display: none;
+     }
      .about-me {
           display: block;
-          max-width: 500px;
-          height: auto;
-          margin-top: 5rem;
-          top: 0;
-          left: -5%;
+          max-width: 400px;
+          height: 800px;
+          margin: 0;
+          top: 40rem;
+          left: 0%;
           padding: 30px 30px;
      }
      .about-me .about {
           font-size: 25px;
      }
      .about-me .about-p p{
-          font-size: 13px;
+          font-size: 16px;
      }
      .work {
-          display: block;
-          max-width: 760px;
-          height: 800px;
-          top: 55rem;
-          left: -5%;
-     }
-     .work .work-title {
-          font-size: 25px;
-     }
-     .btn-work {
-          width: 100px;
-          left: 0;
-     }
-     .btn-work-web {
-          width: 100px;
-          left: 0;
-     }
-     .school {
           display: block;
           max-width: 760px;
           height: 800px;
           top: 95rem;
-          right: 0%;
-     }
-     .school .school-title {
-          font-size: 25px;
-     }
-     .school .school-p p{
-          font-size: 13px;
-     }
-     .plans {
-          display: block;
-          max-width: 760px;
-          height: 700px;
-          top: 120rem;
-          left: -5%;
-     }
-     .plans .plans-title {
-          font-size: 25px;
-     }
-     .plans .plans-p p{
-          font-size: 13px;
-     }
-     .btn-work{
-          display: flex;
-          position: relative;
-          justify-content: left;
-          align-items: left;
-          text-align: left;
-          background-color: rgba(255, 255, 255, 0.1);
-          padding: 10px;
-          width: 250px;
-          margin: 10px;
-          overflow: hidden;
-          border-radius: 10px;
-          top: 0;
-          left: -10px;
-          cursor: pointer;
-     }
-     .btn-work-web {
-          display: flex;
-          position: relative;
-          justify-content: left;
-          align-items: left;
-          text-align: left;
-          background-color: rgba(255, 255, 255, 0.1);
-          padding: 10px;
-          width: 250px;
-          margin: 10px;
-          overflow: hidden;
-          border-radius: 10px;
-          top: 0;
-          left: -10px;
-          cursor: pointer;
-     }
-}
-
-@media (max-width: 385px) {
-     .about-me {
-          display: block;
-          max-width: 500px;
-          height: auto;
-          margin-top: 5rem;
-          top: 0;
-          left: -5%;
-          padding: 30px 30px;
-     }
-     .about-me .about {
-          font-size: 25px;
-     }
-     .about-me .about-p p{
-          font-size: 12px;
-     }
-     .work {
-          display: block;
-          max-width: 760px;
-          height: 800px;
-          top: 55rem;
           left: -5%;
      }
      .work .work-title {
           font-size: 25px;
      }
-     .btn-work {
-          width: 100px;
-          left: 0;
-     }
-     .btn-work-web {
-          width: 100px;
-          left: 0;
-     }
      .school {
           display: block;
           max-width: 760px;
           height: 800px;
-          top: 90rem;
+          top: 140rem;
           right: 0%;
      }
      .school .school-title {
@@ -1771,7 +2075,7 @@ section {
           display: block;
           max-width: 760px;
           height: 700px;
-          top: 120rem;
+          top: 170rem;
           left: -5%;
      }
      .plans .plans-title {
@@ -1781,35 +2085,115 @@ section {
           font-size: 13px;
      }
      .btn-work{
-          display: flex;
-          position: relative;
-          justify-content: left;
-          align-items: left;
-          text-align: left;
-          background-color: rgba(255, 255, 255, 0.1);
-          padding: 10px;
           width: 250px;
-          margin: 10px;
-          overflow: hidden;
-          border-radius: 10px;
-          top: 0;
-          left: -10px;
-          cursor: pointer;
      }
      .btn-work-web {
-          display: flex;
-          position: relative;
-          justify-content: left;
-          align-items: left;
-          text-align: left;
-          background-color: rgba(255, 255, 255, 0.1);
-          padding: 10px;
           width: 250px;
-          margin: 10px;
-          overflow: hidden;
+     }
+     .project-container .project-info, .project-container .project-info2{
+          width: 100%;
+          bottom: -24%;
+          left: 0;
+          padding: 5px;
+          font-size: 13px;
           border-radius: 10px;
-          top: 0;
-          left: -10px;
-          cursor: pointer;
+     }
+}
+
+@media (max-width: 400px) {
+     .intro .intro-title {
+          font-size: 20px;
+     }
+     .intro .contact-button{
+          font-size: 14px;
+     }
+     .intro .intro-subtitle {
+          font-size: 12px;
+     }
+     .intro .my-photo{
+          width: 45px;
+          margin-bottom: -28px;
+     }
+     .about-me {
+          display: block;
+          max-width: 350px;
+          height: auto;
+          margin: 0;
+          top: 40rem;
+          left: 0%;
+     }
+     .about-me .about {
+          font-size: 25px;
+     }
+     .about-me .about-p p{
+          font-size: 13px;
+     }
+     .work {
+          display: block;
+          max-width: 760px;
+          height: 800px;
+          top: 85rem;
+          left: -5%;
+     }
+     .work .work-title {
+          font-size: 25px;
+     }
+     .school {
+          display: block;
+          max-width: 760px;
+          height: 800px;
+          top: 120rem;
+          right: 0%;
+     }
+     .school .school-title {
+          font-size: 25px;
+     }
+     .school .school-p p{
+          font-size: 13px;
+     }
+     .plans {
+          display: block;
+          max-width: 760px;
+          height: 700px;
+          top: 150rem;
+          left: -5%;
+     }
+     .plans .plans-title {
+          font-size: 25px;
+     }
+     .plans .plans-p p{
+          font-size: 13px;
+     }
+}
+@media (max-width: 350px) {
+     .about-me {
+          max-width: 300px;
+          height: auto;
+          margin: 0;
+          top: 40rem;
+          left: 0%;
+     }
+     .about-me .about {
+          font-size: 30px;
+     }
+     .about-me .about-p p{
+          font-size: 13px;
+     }
+     .about-me .scroller_inner li {
+          font-size: 10px;
+     }
+     .btn-work{
+          width: 175px;
+     }
+     .btn-work-web {
+          width: 175px;
+     }
+}
+@media (max-width: 300px) {
+     .btn-work{
+          width: 98px;
+     }
+     .btn-work-web {
+          width: 98px;
      }
 }
