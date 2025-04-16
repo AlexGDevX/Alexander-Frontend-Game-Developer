@@ -57,6 +57,28 @@
           </div>
      </div>
 
+     <section id="intro" class="intro">
+          <div class="intro-content">
+              <h1 class="intro-title">I help founders turn ideas <br> into seamless digital experiences</h1>
+              <p class="intro-subtitle">Hello, I'm Alexander <img src="./assets/me.webp" alt="my-photo" class="my-photo" loading="lazy"> a junior Developer</p>
+               <div class="intro-contact">
+                    <a class="contact-button" href="/#contact">
+                         Let's contact
+                         <span class="arrow-circle">
+                              <span class="arrow">→</span>
+                         </span>
+                    </a>
+                    <div id="emailWrapper" class="email-intro" onclick="copyEmail()">
+                         <i class="fas fa-copy"></i>
+                         <span id="emailText">gslexnadru@gmail.com</span>
+                    </div>
+                    <div id="copyMessage" class="copy-message">
+                         <i class="fas fa-check"></i> Copied to clipboard
+                    </div>
+               </div>
+          </div>
+     </section>
+
      <section id="about" class="about-me" data-sr-id="0">
              <h2 class="about" data-lang="titleab">ABOUT ME</h2>
           <div class="about-text">
@@ -72,7 +94,6 @@
                          <li data-percentage="100%"><i class="fa-brands fa-html5"></i> HTML</li>
                          <li data-percentage="100%"><i class="fa-brands fa-css3-alt"></i> CSS</li>
                          <li data-percentage="100%"><i class="devicon-sass-original"></i> SASS</li>
-                         <li data-percentage="100%"><i class="devicon-sass-original"></i> SCSS</li>
                          <li data-percentage="95%"><i class="devicon-photoshop-plain"></i> Photoshop</li>
                          <li data-percentage="90%"><i class="fa-brands fa-figma"></i> Figma</li>
                          <li data-percentage="80%"><i class="fa-brands fa-js"></i> JavaScript</li>
@@ -172,6 +193,7 @@
               <button onclick="showProject('web', 'web-project2')" data-lang="btn2">Project2</button>
               <button onclick="showProject('web', 'web-project3')" data-lang="btn3">Project3</button>
               <button onclick="showProject('web', 'web-project4')" data-lang="btn4">Project4</button>
+              <button onclick="showProject('web', 'web-project5')" data-lang="btn5">Project5</button>
           </div>
       
           <div class="project-container">
@@ -209,8 +231,19 @@
                     <i class="fa-brands fa-js" style="margin-left: 10px;"></i>
                     </div>
                </div>
-               <!-- Web-Project3 -->
+               <!-- Web-Project4 -->
               <img id="web-project4" src="./assets/img-prj/web-project4.webp" alt="Project4" class="project-image" loading="lazy">
+              <div class="project-info2">
+                    <p data-lang="description">This Project was created with:</p>
+                    <p style="color: rgb(100, 195, 212); text-shadow: 0px 0px 10px rgba(23, 164, 189, 0.8); font-size: 13px;">HTML, CSS & JavaScript</p>
+               <div class="project-icons">
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-css3-alt" style="margin-left: 10px;"></i>
+                    <i class="fa-brands fa-js" style="margin-left: 10px;"></i>
+                    </div>
+               </div>
+               <!-- Web-Project5 -->
+              <img id="web-project5" src="./assets/img-prj/web-project5.webp" alt="Project5" class="project-image" loading="lazy">
               <div class="project-info2">
                     <p data-lang="description">This Project was created with:</p>
                     <p style="color: rgb(100, 195, 212); text-shadow: 0px 0px 10px rgba(23, 164, 189, 0.8); font-size: 13px;">HTML, CSS & JavaScript</p>
@@ -251,13 +284,27 @@
           </div>
      </section>
 
-     <section class="contact" data-sr-id="5">
+     <section id="contact" class="contact" data-sr-id="5">
           <div class="bg-contact"></div>
           <div class="contact-tab">
                <div class="close-contact"></div>
                <div class="contact-icons">
-                    <a href="https://github.com/AlexanderGeorg" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://harlequin-cookie-30.tiiny.site" target="_blank"><i class="fas fa-user"></i></a>
+                    <div class="git-container">
+                         <a href="https://github.com/AlexGDevX" target="_blank">
+                             <i class="fab fa-github"></i>
+                         </a>
+                         <div id="git-profile" class="git-text">
+                             GitHub Profile
+                         </div>
+                    </div>
+                    <div class="cv-container">
+                         <a href="https://harlequin-cookie-30.tiiny.site" target="_blank">
+                             <i class="fas fa-user"></i>
+                         </a>
+                         <div id="cv-profile" class="cv-text">
+                             My cv
+                         </div>
+                    </div>
                     <div class="discord-container">
                          <a target="_blank">
                              <i class="fab fa-discord"></i>
