@@ -1164,7 +1164,7 @@ button.active-button {
      position: absolute;
      max-width: 1000px;
      height: 500px;
-     top: 190rem;
+     top: 230rem;
      right: 10%;
      padding: 50px 50px;
      align-items: flex-end;
@@ -1244,7 +1244,7 @@ button.active-button {
      position: absolute;
      max-width: 1000px;
      height: 600px;
-     top: 230rem;
+     top: 270rem;
      left: 10%;
      padding: 50px 50px;
      align-items: flex-start;
@@ -1608,7 +1608,7 @@ button.active-button {
      }
      .school {
           right: 15%;
-          top: 205rem;
+          top: 250rem;
      }
      .school-title {
           font-size: 55px;
@@ -1618,7 +1618,7 @@ button.active-button {
      }
      .plans {
           left: 15%;
-          top: 240rem;
+          top: 290rem;
      }
      .plans .plans-title {
           font-size: 55px;
@@ -1685,12 +1685,12 @@ button.active-button {
           display: block;
           max-width: 760px;
           height: 700px;
-          top: 160rem;
+          top: 170rem;
           right: 5%;
      }
      .plans {
           left: 10%;
-          top: 200rem;
+          top: 210rem;
      }
      .project-container {
           width: 80%;
@@ -1854,7 +1854,7 @@ button.active-button {
           display: block;
           max-width: 760px;
           height: 700px;
-          top: 170rem;
+          top: 190rem;
           right: 5%;
      }
      .plans .plans-title {
@@ -1864,7 +1864,7 @@ button.active-button {
           display: block;
           max-width: 760px;
           height: 700px;
-          top: 210rem;
+          top: 230rem;
           margin-right: 50px;
           left: 0%;
      }
@@ -1890,7 +1890,7 @@ button.active-button {
           display: block;
           max-width: 600px;
           height: 800px;
-          top: 105rem;
+          top: 120rem;
           left: -5%;
           margin: 0;
      }
@@ -1901,7 +1901,7 @@ button.active-button {
           display: block;
           max-width: 760px;
           height: 800px;
-          top: 150rem;
+          top: 180rem;
           right: 0%;
      }
      .school .school-title {
@@ -1914,7 +1914,7 @@ button.active-button {
           display: block;
           max-width: 760px;
           height: 700px;
-          top: 180rem;
+          top: 220rem;
           left: -5%;
      }
      .plans .plans-title {
@@ -2132,7 +2132,7 @@ button.active-button {
           display: block;
           max-width: 760px;
           height: 800px;
-          top: 85rem;
+          top: 95rem;
           left: -5%;
      }
      .work .work-title {
@@ -2142,7 +2142,7 @@ button.active-button {
           display: block;
           max-width: 760px;
           height: 800px;
-          top: 120rem;
+          top: 140rem;
           right: 0%;
      }
      .school .school-title {
@@ -2155,7 +2155,7 @@ button.active-button {
           display: block;
           max-width: 760px;
           height: 700px;
-          top: 150rem;
+          top: 170rem;
           left: -5%;
      }
      .plans .plans-title {
